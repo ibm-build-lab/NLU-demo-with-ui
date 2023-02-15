@@ -12,32 +12,51 @@ https://developer.ibm.com/tutorials/build-a-recommendation-engine-with-watson-na
 
 Once you get to the "Deploy model to Watson Natural Language Understanding heading" you can use this application to analyze text instead of the curl commands. 
 
-### 2. Set environment variables
 
-Within the NLU service, create "Service Credentials".  Save the values for API Key and URL. Set them as environment variables:
-
-```bash
-export REACT_APP_apikey=<nlu service apikey>
-export REACT_APP_nlu_url=<nlu url>
-```
-
-### 3. Clone the directory, compile and start the application
+### 2. Clone the directory
 
 ```bash
 git clone nlu-demo-with-ui
 cd nlu-demo-with-ui
+```
+
+### 3. Set environment variables
+
+Within the NLU service, create "Service Credentials".  Save the values for API Key and URL. Set them as environment variables.  Create a `.env` file in this top level directory and add the following to it:
+
+```bash
+SASS_PATH=./node_modules
+PORT=8080
+REACT_APP_apikey=<nlu-service-api-key>
+REACT_APP_nlu_url=<nlu-service-url>
+```
+
+## Run the application
+
+### Run locally
+
+Compile and start the application:
+
+```bash
 npm install
 npm start
 ```
 
-## Installing this demo on an OpenShift cluster
+### Installing and running on an existing OpenShift cluster
 
-We have included the files to create an image and load it onto an existing OpenShift cluster.
+1. From the OpenShift console, go into the `Developer` view.  Select `+Add`.  Choose `Import from Git`.
 
-```bash
-cd docker_dir
-docker build -f Dockerfile
-```
+2. Enter this repo under `Git Repo URL`.
+
+3. Keep `Dockerfile` as the method the Import strategy
+
+4. Choose a unique `Name`
+   
+5. Select `Create`
+   
+6. Go to Topology and open the newly created build icon.  You can watch the progress
+   
+7. Eventually, the build should complete, the pods should start and you can select the host link to see the application
 
 ## Usage
 
@@ -116,3 +135,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## References
+
+[Simple Guide to Deploying a ReactJS Frontend to OpenShift](https://dev.to/ibmdeveloper/simple-guide-to-deploying-a-reactjs-frontend-to-red-hat-openshift-3hp6)
