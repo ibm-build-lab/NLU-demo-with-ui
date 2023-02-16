@@ -10,7 +10,7 @@ COPY . /app
 RUN npm run build
 
 #Run Steps
-FROM nginx:1.19.8-alpine  
+FROM nginx:1.23.3-alpine-slim
 COPY --from=build-step /app/build /usr/share/nginx/html
 
 RUN chgrp -R 0 /var/cache/nginx && \
