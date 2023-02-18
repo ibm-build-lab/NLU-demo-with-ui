@@ -1,3 +1,4 @@
+# Build step
 FROM node:alpine3.10 as build-step
 
 RUN mkdir /app
@@ -9,11 +10,18 @@ COPY . /app
 
 RUN npm run build
 
-#Run Steps
-FROM nginx:1.23.3-alpine-slim
-COPY --from=build-step /app/build /usr/share/nginx/html
+# Run Steps
+FROM registry.access.redhat.com/ubi8/nginx-120
+COPY --from=build-step /app/build /tmp/src/
 
-RUN chgrp -R 0 /var/cache/nginx && \
-    chmod -R g=u /var/cache/nginx
-RUN chgrp -R 0 /etc/nginx && \
-    chmod -R g=u /etc/nginx
+# Add application sources to a directory that the assemble script expects them
+# and set permissions so that the container runs without root access
+USER 0
+RUN chown -R 1001:0 /tmp/src/
+USER 1001
+
+# Let the assemble script to install the dependencies
+RUN /usr/libexec/s2i/assemble
+
+# Run script uses standard ways to run the application
+CMD /usr/libexec/s2i/run
