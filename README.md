@@ -68,7 +68,7 @@ Simply insert text into the text box, click "Submit" and you will see the sentim
 
 ## Modifying what results you want to see
 
-To change what is displayed from the analyzation, simple edit the src/App.js file.  Locate the line (approx line 82):
+To change what is displayed from the analyzation, simply edit the `src/App.js` file.  Locate the line (approx line 82):
 ```
 document.getElementById("results").textContent = JSON.stringify(body.sentiment.document, null, 4);
 ```
