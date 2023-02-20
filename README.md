@@ -20,20 +20,21 @@ git clone nlu-demo-with-ui
 cd nlu-demo-with-ui
 ```
 
-### 3. Set environment variables
-
-Within the NLU service, create "Service Credentials".  Save the values for API Key and URL. Set them as environment variables.  Create a `.env` file in this top level directory and add the following to it:
-
-```bash
-REACT_APP_apikey=<nlu-service-api-key>
-REACT_APP_nlu_url=<nlu-service-url>
-```
+### 3. Within the NLU service launched in your cloud account, create "Service Credentials".  Save the values for API Key and URL. 
 
 ## Run the application
 
 ### Run locally
 
-Compile and start the application:
+### Set environment variables
+
+Create a `.env` file in this top level directory and add the following to it:
+
+```bash
+REACT_APP_apikey=<nlu-service-api-key>
+REACT_APP_nlu_url=<nlu-service-url>
+```
+### Compile and start the application:
 
 ```bash
 npm install
