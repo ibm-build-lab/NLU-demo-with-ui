@@ -30,6 +30,7 @@ Within the NLU service launched in your cloud account, create "Service Credentia
    ```bash
    REACT_APP_apikey=<nlu-service-api-key>
    REACT_APP_nlu_url=<nlu-service-url>
+   PORT=3000
    ```
 3. Compile and start the application:
 
