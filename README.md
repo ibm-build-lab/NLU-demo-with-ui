@@ -12,36 +12,31 @@ https://developer.ibm.com/tutorials/build-a-recommendation-engine-with-watson-na
 
 Once you get to the "Deploy model to Watson Natural Language Understanding heading" you can use this application to analyze text instead of the curl commands. 
 
-
-### 2. Clone the directory
-
-```bash
-git clone nlu-demo-with-ui
-cd nlu-demo-with-ui
-```
-
-### 3. Create NLU Service credentials
+### 2. Create NLU Service credentials
 
 Within the NLU service launched in your cloud account, create "Service Credentials".  Save the values for API Key and URL. 
 
 ## Run the application
 
 ### Run locally
+1. Clone this directory:
 
-### Set environment variables
+   ```bash
+   git clone nlu-demo-with-ui
+   cd nlu-demo-with-ui
+   ```
+2. Set environment variables. Create a `.env` file in this top level directory and add the following to it:
 
-Create a `.env` file in this top level directory and add the following to it:
+   ```bash
+   REACT_APP_apikey=<nlu-service-api-key>
+   REACT_APP_nlu_url=<nlu-service-url>
+   ```
+3. Compile and start the application:
 
-```bash
-REACT_APP_apikey=<nlu-service-api-key>
-REACT_APP_nlu_url=<nlu-service-url>
-```
-### Compile and start the application:
-
-```bash
-npm install
-npm start
-```
+   ```bash
+   npm install
+   npm start
+   ```
 
 ### Installing and running on an existing OpenShift cluster
 
@@ -60,7 +55,7 @@ npm start
    
 7. Eventually, the build should complete, the pods should start.
 8. Under `Builds`, you should see a `Build Config`. Open it and navigate to the `Environment` tab. Add the `REACT_APP_apikey` and `REACT_APP_nlu_url` environment variables. Start a new build
-9. From the `Developer`->`Topology` view, open the deployed application and select the host link to see the application
+9. Once the build is complete, open the deployed application and select the host link to see the application
 
 NOTE: if you change the code in the `git` repo, you will restart a new `build`
 
