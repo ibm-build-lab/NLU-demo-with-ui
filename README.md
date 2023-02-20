@@ -58,6 +58,8 @@ npm start
 8. Add the `REACT_APP_apikey` and `REACT_APP_nlu_url`to the `deployment.  Under the `Administrator` view, find `Workloads` -> `Deployments` and select the NLU demo deployment.  Add the environment variables.  The pod should restart, but if it doesn't, go ahead and delete it.  
 9. From the `Developer`->`Topology` view, open the deployed application and select the host link to see the application
 
+NOTE: if you change the code in the `git` repo, you will restart a new `build`
+
 ## Usage
 
 Simply insert text into the text box, click "Submit" and you will see the sentiment of the text
