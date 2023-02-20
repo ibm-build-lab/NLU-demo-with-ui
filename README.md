@@ -57,7 +57,7 @@ Within the NLU service launched in your cloud account, create "Service Credentia
 8. Under `Builds`, you should see a `Build Config`. Open it and navigate to the `Environment` tab. Add the `REACT_APP_apikey` and `REACT_APP_nlu_url` environment variables. Start a new build
 9. Once the build is complete, open the deployed application and select the host link to see the application
 
-NOTE: if you change the code in the `git` repo, you will restart a new `build`
+NOTE: if you change the code in the `git` repo, you will need to restart a new `build`
 
 ## Usage
 
