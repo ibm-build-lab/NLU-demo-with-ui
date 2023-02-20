@@ -50,11 +50,11 @@ npm start
 
 3. Keep `Dockerfile` as the method the Import strategy
 
-4. Choose a unique `Name`
+4. You can keep all the other defaults or change the name 
    
 5. Select `Create`
    
-6. Go to Topology and open the newly created build icon.  You can watch the progress
+6. Go to `Topology` and open the newly created build icon.  You can watch the progress
    
 7. Eventually, the build should complete, the pods should start.
 8. Add the `REACT_APP_apikey` and `REACT_APP_nlu_url` to the `deployment`.  Under the `Administrator` view, find `Workloads` -> `Deployments` and select the NLU demo deployment.  Add the environment variables.  The pod should restart, but if it doesn't, go ahead and delete it.  
