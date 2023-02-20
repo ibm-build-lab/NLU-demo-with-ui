@@ -25,8 +25,6 @@ cd nlu-demo-with-ui
 Within the NLU service, create "Service Credentials".  Save the values for API Key and URL. Set them as environment variables.  Create a `.env` file in this top level directory and add the following to it:
 
 ```bash
-SASS_PATH=./node_modules
-PORT=8080
 REACT_APP_apikey=<nlu-service-api-key>
 REACT_APP_nlu_url=<nlu-service-url>
 ```
@@ -56,7 +54,9 @@ npm start
    
 6. Go to Topology and open the newly created build icon.  You can watch the progress
    
-7. Eventually, the build should complete, the pods should start and you can select the host link to see the application
+7. Eventually, the build should complete, the pods should start.
+8. Add the `REACT_APP_apikey` and `REACT_APP_nlu_url`to the `deployment.  Under the `Administrator` view, find `Workloads` -> `Deployments` and select the NLU demo deployment.  Add the environment variables.  The pod should restart, but if it doesn't, go ahead and delete it.  
+9. From the `Developer`->`Topology` view, open the deployed application and select the host link to see the application
 
 ## Usage
 
