@@ -20,7 +20,7 @@ USER 0
 RUN chown -R 1001:0 /tmp/src/
 USER 1001
 
-# Let the assemble script to install the dependencies
+# Let the assemble script install the dependencies
 RUN /usr/libexec/s2i/assemble
 
 # Run script uses standard ways to run the application
