@@ -20,7 +20,9 @@ git clone nlu-demo-with-ui
 cd nlu-demo-with-ui
 ```
 
-### 3. Within the NLU service launched in your cloud account, create "Service Credentials".  Save the values for API Key and URL. 
+### 3. Create NLU Service credentials
+
+Within the NLU service launched in your cloud account, create "Service Credentials".  Save the values for API Key and URL. 
 
 ## Run the application
 
