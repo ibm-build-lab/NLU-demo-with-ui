@@ -43,7 +43,8 @@ npm start
 
 ### Installing and running on an existing OpenShift cluster
 
-1. From the OpenShift console, go into the `Developer` view.  Select `+Add`.  Choose `Import from Git`.
+1. Create a new project called `nlu-demo`
+2. From the OpenShift console, go into the `Developer` view. Select the `nlu-demo` project. Select `+Add`.  Choose `Import from Git`.
 
 2. Enter this repo under `Git Repo URL`.
 
