@@ -42,11 +42,11 @@ Within the NLU service launched in your cloud account, create "Service Credentia
 ### Installing and running on an existing OpenShift cluster
 
 1. Create a new project called `nlu-demo`
-2. From the OpenShift console, go into the `Developer` view. Select the `nlu-demo` project. Select `+Add`.  Choose `Import from Git`.
+2. From the OpenShift console, go into the `Developer` view. Select the `nlu-demo` project. Select `+Add`.  Choose `Git Repository`.
 
-2. Enter this repo under `Git Repo URL`.
+3. Be sure to use `Dockerfile` as the method of Import strategy. NOTE: on Openshift Version 8, this choice is made from the `Git Repository` card, on later versions, it is a selection from within the `Import from Git` page.
 
-3. Keep `Dockerfile` as the method the Import strategy
+2. On the `Import from Git` page, enter this repo under `Git Repo URL`.
 
 4. You can keep all the other defaults or change the name 
    
