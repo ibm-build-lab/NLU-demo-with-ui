@@ -141,3 +141,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ## References
 
 [Simple Guide to Deploying a ReactJS Frontend to OpenShift](https://dev.to/ibmdeveloper/simple-guide-to-deploying-a-reactjs-frontend-to-red-hat-openshift-3hp6)
+
+[Natural Language Understanding API documentation](https://cloud.ibm.com/apidocs/natural-language-understanding)
