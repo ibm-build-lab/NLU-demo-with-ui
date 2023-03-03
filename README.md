@@ -144,4 +144,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 [Natural Language Understanding API documentation](https://cloud.ibm.com/apidocs/natural-language-understanding)
 
+[Server side code in Node to integrate with NLU APIs](https://cloud.ibm.com/apidocs/natural-language-understanding?code=node)
+
 [NLU Code Pattern with full client/server React app](https://github.com/IBM/natural-language-understanding-code-pattern)
+
+
