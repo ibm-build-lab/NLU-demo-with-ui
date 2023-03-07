@@ -2,12 +2,7 @@
 
 In this code pattern, we will create an application that takes in text and analyzes it for sentiment using the IBM Natural Language Understanding APIs. The user will enter text into a text area and press the "Submit" button.  The text is analyzed based on the **latest loaded model** into the NLU service.
 
-The main benefit of using the Watson Natural Understanding Service is its powerful analytics engine that provides cognitive enrichments and insights into data. The key enrichments that are extracted include:
-
-Entities: people, companies, organizations, cities, and more.
-Keywords: important topics typically used to index or search the data.
-Concepts: identified general concepts that aren't necessarily referenced in the data.
-Sentiment: the overall positive or negative sentiment of the data.
+The main benefit of using the IBM Watson® Watson Natural Understanding Service is its powerful analytics engine that provides cognitive enrichments and insights into data. IBM Watson® Natural Language Understanding uses deep learning to extract meaning and metadata from unstructured text data. Use text analytics to extract categories, classification, entities, keywords, sentiment, emotion, relations, and syntax.
 
 The React Frontend was created from the [Create React App](https://github.com/facebook/create-react-app) project.
 
@@ -16,6 +11,16 @@ When you have completed this code pattern, you will understand how to:
 * use an instance of Watson Natural Language Understanding
 * make API calls into a preprovisioned Natural Language Understanding Service to retrieve the latest model and analyze text against it
 * use a React frontend to drive the calls into NLU
+
+<p align="center">
+  <img alt="architecture" width="600" src="./public/architecture.png">
+</p>
+
+1. User adds text to the application (running locally or in the IBM Cloud).
+1. The application requests the latest model from IBM Watson Natural Language Understanding service.
+1. The application requests user inputted text to be analyzed using latest model
+1. Watson Natural Language Understanding service processes the text or url and extract features such us keywords, concepts, categories
+1. Results are output to application
 
 ## Set up
 
