@@ -19,7 +19,7 @@ When you have completed this code pattern, you will understand how to:
 1. User adds text to the application (running locally or in the IBM Cloud).
 1. The application requests the latest model from IBM Watson Natural Language Understanding service.
 1. The application requests user inputted text to be analyzed using latest model
-1. Watson Natural Language Understanding service processes the text or url and extract features such us keywords, concepts, categories
+1. Watson Natural Language Understanding service processes the text and extracts features such as keywords, concepts, categories
 1. Results are output to application
 
 ## Set up
