@@ -99,7 +99,7 @@ Once you get to the "Deploy model to Watson Natural Language Understanding headi
    
 7. Eventually, the build should complete, the pods should start.
 8. Under `Builds`, you should see a `Build Config`. Open it and navigate to the `Environment` tab. Add the `REACT_APP_apikey` and `REACT_APP_nlu_url` environment variables. Start a new build
-9. Once the build is complete, open the deployed application and select the host link to see the application
+9. Once the build is complete, open the deployed application and select the `host` link to see the application
 
 NOTE: if you change the code in the `git` repo, you will need to restart a new `build`
 
