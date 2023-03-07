@@ -13,7 +13,7 @@ When you have completed this code pattern, you will understand how to:
 * use a React frontend to drive the calls into NLU
 
 <p align="center">
-  <img alt="architecture" width="600" src="./public/architecture.png">
+  <img alt="architecture" width="600" src="./public/NLU%20App.jpg">
 </p>
 
 1. User adds text to the application (running locally or in the IBM Cloud).
