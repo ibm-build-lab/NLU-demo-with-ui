@@ -1,6 +1,21 @@
 # Natural Language Understand Text Analyzation Engine
 
-This demo was created from the [Create React App](https://github.com/facebook/create-react-app) project.
+In this code pattern, we will create an application that takes in text and analyzes it for sentiment using the IBM Natural Language Understanding APIs. The user will enter text into a text area and press the "Submit" button.  The text is analyzed based on the **latest loaded model** into the NLU service.
+
+The main benefit of using the Watson Natural Understanding Service is its powerful analytics engine that provides cognitive enrichments and insights into data. The key enrichments that are extracted include:
+
+Entities: people, companies, organizations, cities, and more.
+Keywords: important topics typically used to index or search the data.
+Concepts: identified general concepts that aren't necessarily referenced in the data.
+Sentiment: the overall positive or negative sentiment of the data.
+
+The React Frontend was created from the [Create React App](https://github.com/facebook/create-react-app) project.
+
+When you have completed this code pattern, you will understand how to:
+
+* use an instance of Watson Natural Language Understanding
+* make API calls into a preprovisioned Natural Language Understanding Service to retrieve the latest model and analyze text against it
+* use a React frontend to drive the calls into NLU
 
 ## Set up
 
