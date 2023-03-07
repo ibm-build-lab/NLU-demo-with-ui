@@ -1,20 +1,18 @@
 # Natural Language Understand Text Analyzation Engine
 
-In this code pattern, we will create an application that takes in text and analyzes it for sentiment using the IBM Natural Language Understanding APIs. The user will enter text into a text area and press the "Submit" button.  The text is analyzed based on the **latest loaded model** into the NLU service.
+In this code pattern, we will create a web app that takes in text and analyzes it for sentiment using the IBM Natural Language Understanding APIs. The user will enter text into a text area and press the "Submit" button.  The text is analyzed based on the **latest loaded model** into an IBM Watson®  Natural Understanding Service.
 
-The main benefit of using the IBM Watson® Watson Natural Understanding Service is its powerful analytics engine that provides cognitive enrichments and insights into data. IBM Watson® Natural Language Understanding uses deep learning to extract meaning and metadata from unstructured text data. Use text analytics to extract categories, classification, entities, keywords, sentiment, emotion, relations, and syntax.
+The main benefit of using the Natural Language Understanding (NLU) service is its powerful analytics engine that provides cognitive enrichments and insights into data. NLU uses deep learning to extract meaning and metadata from unstructured text data. It uses text analytics to extract categories, classification, entities, keywords, sentiment, emotion, relations, and syntax.
 
-The React Frontend was created from the [Create React App](https://github.com/facebook/create-react-app) project.
+NOTE: The React frontend was created from the [Create React App](https://github.com/facebook/create-react-app) project.
 
 When you have completed this code pattern, you will understand how to:
 
-* use an instance of Watson Natural Language Understanding
-* make API calls into a preprovisioned Natural Language Understanding Service to retrieve the latest model and analyze text against it
+* interact with an instance of the IBM Watson® Natural Language Understanding libraries
+* make API calls into a preprovisioned NLU Service to retrieve the latest model and analyze text against it
 * use a React frontend to drive the calls into NLU
 
-<p align="center">
-  <img alt="architecture" width="600" src="./public/NLU.png">
-</p>
+![architecture](./public/NLU.png)
 
 1. User adds text to the application (running locally or in the IBM Cloud).
 1. The application requests the latest model from IBM Watson Natural Language Understanding service.
@@ -22,27 +20,50 @@ When you have completed this code pattern, you will understand how to:
 1. Watson Natural Language Understanding service processes the text and extracts features such as keywords, concepts, categories
 1. Results are output to application
 
-## Set up
+## Prerequisites
+### Public Cloud
+1. Sign up for an [IBM Cloud account](https://cloud.ibm.com/registration).
+1. Download the [IBM Cloud CLI](https://cloud.ibm.com/docs/cli/index.html#overview)
+1. Create an instance of the Natural Language Understanding service and get your credentials:
+    * Go to the Natural [Language Understanding](https://cloud.ibm.com/catalog/services/natural-language-understanding) page in the IBM Cloud Catalog.
+    * Log in to your IBM Cloud account.
+    * Click **Create**.
+    * Click Show to view the service credentials.
+    * Copy the `apikey` value.
+    * Copy the `url` value.
 
-### 1. Use IBM Watson Studio to create a model to load into the IBM Natural Language Understanding Service.
+# Steps
+1. [Create Watson services with IBM Cloud](#1-create-watson-services-with-ibm-cloud)
+1. [Create credentials](#2-create-credentials)
+1. [Set up the model](#3-set-up-the-model)
+1. [Run the application](#4-run-the-application)
 
-You can follow this tutorial to see how to do this:
+## 1. Create Watson services with IBM Cloud
 
-https://developer.ibm.com/tutorials/build-a-recommendation-engine-with-watson-natural-language-understanding/
+Create the following services:
+
+* [**IBM Watson Studio**](https://cloud.ibm.com/catalog/services/watson-studio)
+* [**Watson Natural Language Understanding**](https://cloud.ibm.com/catalog/services/natural-language-understanding)
+
+## 2. Create credentials
+
+The credentials for IBM Cloud services, can be found in the ``Services`` menu in IBM Cloud, by selecting the ``Service Credentials`` option for each service.
+
+## 3. Set up the model
+
+Use Watson Studio to create a model to load into the Natural Language Understanding Service.
+
+You can follow [this](https://developer.ibm.com/tutorials/build-a-recommendation-engine-with-watson-natural-language-understanding/) tutorial to see how to do this.
 
 Once you get to the "Deploy model to Watson Natural Language Understanding heading" you can use this application to analyze text instead of the curl commands. 
 
-### 2. Create NLU Service credentials
-
-Within the NLU service launched in your cloud account, create "Service Credentials".  Save the values for API Key and URL. 
-
-## Run the application
+## 4. Run the application
 
 ### Run locally
 1. Clone this directory:
 
    ```bash
-   git clone nlu-demo-with-ui
+   git clone https://github.com/ibm-build-lab/NLU-demo-with-ui
    cd nlu-demo-with-ui
    ```
 2. Set environment variables. Create a `.env` file in this top level directory and add the following to it:
@@ -59,8 +80,10 @@ Within the NLU service launched in your cloud account, create "Service Credentia
    npm start
    ```
 
-### Installing and running on an existing OpenShift cluster
+### Deploy to IBM Cloud
 
+1. Provision an **OpenShift** cluster in your IBM Cloud account
+1. Open the OpenShift console by selecting the blue `OpenShift web console` button at the top of the cluster detail page 
 1. Create a new project called `nlu-demo`
 2. From the OpenShift console, go into the `Developer` view. Select the `nlu-demo` project. Select `+Add`.  Choose `Git Repository`.
 
@@ -168,4 +191,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 [NLU Code Pattern with full client/server React app](https://github.com/IBM/natural-language-understanding-code-pattern)
 
+<!-- keep this -->
+## License
+
+This code pattern is licensed under the Apache License, Version 2. Separate third-party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1](https://developercertificate.org/) and the [Apache License, Version 2](https://www.apache.org/licenses/LICENSE-2.0.txt).
+
+[Apache License FAQ](https://www.apache.org/foundation/license-faq.html#WhatDoesItMEAN)
 
