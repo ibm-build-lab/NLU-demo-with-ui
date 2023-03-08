@@ -28,7 +28,7 @@ When you have completed this code pattern, you will understand how to:
     * Go to the Natural [Language Understanding](https://cloud.ibm.com/catalog/services/natural-language-understanding) page in the IBM Cloud Catalog.
     * Log in to your IBM Cloud account.
     * Click **Create**.
-    * Click Show to view the service credentials.
+    * Click **Show** to view the service credentials.
     * Copy the `apikey` value.
     * Copy the `url` value.
 
