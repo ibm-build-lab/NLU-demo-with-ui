@@ -24,13 +24,6 @@ When you have completed this code pattern, you will understand how to:
 ### Public Cloud
 1. Sign up for an [IBM Cloud account](https://cloud.ibm.com/registration).
 1. Download the [IBM Cloud CLI](https://cloud.ibm.com/docs/cli/index.html#overview)
-1. Create an instance of the Natural Language Understanding service and get your credentials:
-    * Go to the Natural [Language Understanding](https://cloud.ibm.com/catalog/services/natural-language-understanding) page in the IBM Cloud Catalog.
-    * Log in to your IBM Cloud account.
-    * Click **Create**.
-    * Click **Show** to view the service credentials.
-    * Copy the `apikey` value.
-    * Copy the `url` value.
 
 # Steps
 1. [Create Watson services with IBM Cloud](#1-create-watson-services-with-ibm-cloud)
@@ -43,11 +36,16 @@ When you have completed this code pattern, you will understand how to:
 Create the following services:
 
 * [**IBM Watson Studio**](https://cloud.ibm.com/catalog/services/watson-studio)
-* [**Watson Natural Language Understanding**](https://cloud.ibm.com/catalog/services/natural-language-understanding)
+* [**IBM Watson Natural Language Understanding**](https://cloud.ibm.com/catalog/services/natural-language-understanding)
 
 ## 2. Create credentials
 
-The credentials for IBM Cloud services, can be found in the ``Services`` menu in IBM Cloud, by selecting the ``Service Credentials`` option for each service.
+* Go to your [Natural Language Understanding](https://cloud.ibm.com/catalog/services/natural-language-understanding) service.
+* Select **Service Credentials**
+* Click **New Credential**, and **Add** on the dialog box if you don't already have them. Be sure they have **Manager** authority
+* Click the **V** next to the credential to open and see the JSON.
+* Copy the `apikey` value.
+* Copy the `url` value.
 
 ## 3. Set up the model
 
@@ -55,7 +53,7 @@ Use Watson Studio to create a model to load into the Natural Language Understand
 
 You can follow [this](https://developer.ibm.com/tutorials/build-a-recommendation-engine-with-watson-natural-language-understanding/) tutorial to see how to do this.
 
-Once you get to the "Deploy model to Watson Natural Language Understanding heading" you can use this application to analyze text instead of the curl commands. 
+Once you get to the "Deploy model to Watson Natural Language Understanding" heading you can use this application to analyze text instead of the curl commands. 
 
 ## 4. Run the application
 
@@ -82,20 +80,16 @@ Once you get to the "Deploy model to Watson Natural Language Understanding headi
 
 ### Deploy to IBM Cloud
 
-1. Provision an **OpenShift** cluster in your IBM Cloud account
-1. Open the OpenShift console by selecting the blue `OpenShift web console` button at the top of the cluster detail page 
+1. Provision an OpenShift cluster in your IBM Cloud account
+1. Open the OpenShift console by selecting the blue **OpenShift web console** button at the top of the cluster detail page 
 1. Create a new project called `nlu-demo`
-2. From the OpenShift console, go into the `Developer` view. Select the `nlu-demo` project. Select `+Add`.  Choose `Git Repository`.
-
+2. From the OpenShift console, go into the **Developer** view. Select the `nlu-demo` project. Select **+Add**.  Choose `Git Repository`.
 3. Be sure to use `Dockerfile` as the method of Import strategy. NOTE: on Openshift Version 8, this choice is made from the `Git Repository` card. On later versions, it is a selection from within the `Import from Git` page.
-
 2. On the `Import from Git` page, enter this repo under `Git Repo URL`.
-
-4. You can keep all the other defaults or change the name 
+4. You can keep all the other defaults or change the name   
+5. Select **Create**
    
-5. Select `Create`
-   
-6. Go to `Topology` and open the newly created app icon.  You can watch the progress.
+6. Go to **Topology** and open the newly created app icon.  You can watch the progress.
    
 7. Eventually, the build should complete, the pods should start.
 8. Under `Builds`, you should see a `Build Config`. Open it and navigate to the `Environment` tab. Add the `REACT_APP_apikey` and `REACT_APP_nlu_url` environment variables. Start a new build
@@ -105,7 +99,7 @@ NOTE: if you change the code in the `git` repo, you will need to restart a new `
 
 ## Usage
 
-Simply insert text into the text box, click "Submit" and you will see the sentiment of the text
+Simply insert text into the text box, click **Submit** and you will see the sentiment of the text
 
 ## Modifying what results you want to see
 
