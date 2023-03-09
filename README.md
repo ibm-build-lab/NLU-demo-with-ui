@@ -24,12 +24,8 @@ NOTE: The React frontend was created from the [Create React App](https://github.
 2 hours
 
 ## Steps
-1. [Create Watson services with IBM Cloud](#1-create-watson-services-with-ibm-cloud)
-1. [Create credentials](#2-create-credentials)
-1. [Set up the model](#3-set-up-the-model)
-1. [Run the application](#4-run-the-application)
 
-### 1. Create Watson services with IBM Cloud
+### 1. Create Watson services on IBM Cloud
 
 Create the following services:
 
