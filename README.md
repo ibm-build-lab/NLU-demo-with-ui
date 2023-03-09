@@ -1,4 +1,4 @@
-# Natural Language Understand Text Analyzation Engine Demo
+# Natural Language Understand Text Analyzation Demo
 
 ## Introduction
 In this demo, we will create a web app that takes in text and analyzes it for sentiment using the IBM Watson® Natural Language Understanding (NLU) APIs. The user will enter text into a text area and press the "Submit" button.  The text is analyzed based on the **latest loaded model** into an NLU Service.
