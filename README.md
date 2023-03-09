@@ -32,22 +32,22 @@ Create the following services:
 * [**IBM Watson Studio**](https://cloud.ibm.com/catalog/services/watson-studio)
 * [**IBM Watson Natural Language Understanding**](https://cloud.ibm.com/catalog/services/natural-language-understanding)
 
-### 2. Create credentials
-
-* Open your [Natural Language Understanding](https://cloud.ibm.com/catalog/services/natural-language-understanding) service console.
-* Select **Service Credentials**
-* Click **New Credential**, and **Add** on the dialog box if you don't already have them. Be sure they have **Manager** authority
-* Click the **v** next to the credential to open and see the JSON
-* Copy the `apikey` value
-* Copy the `url` value
-
-### 3. Set up the model
+### 2. Set up the model
 
 Use Watson Studio to create a model to load into the Natural Language Understanding Service.
 
 You can follow [this](https://developer.ibm.com/tutorials/build-a-recommendation-engine-with-watson-natural-language-understanding/) tutorial to see how to do this.
 
 Once you get to the "Deploy model to Watson Natural Language Understanding" heading you can use this application to analyze text instead of the curl commands. 
+
+### 3. Create credentials
+
+* Open your [Natural Language Understanding](https://cloud.ibm.com/catalog/services/natural-language-understanding) service console.
+* Select **Service Credentials**
+* Click **New Credential**, and **Add** on the dialog box if you don't already have them. Be sure they have **Manager** authority
+* Click the **v** next to the credential to open and see the JSON
+* Copy the `apikey` value to use in the next step
+* Copy the `url` value to use in the next step
 
 ### 4. Run the application
 
