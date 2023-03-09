@@ -37,9 +37,9 @@ Create the following services:
 * Go to your [Natural Language Understanding](https://cloud.ibm.com/catalog/services/natural-language-understanding) service.
 * Select **Service Credentials**
 * Click **New Credential**, and **Add** on the dialog box if you don't already have them. Be sure they have **Manager** authority
-* Click the **V** next to the credential to open and see the JSON.
-* Copy the `apikey` value.
-* Copy the `url` value.
+* Click the **v** next to the credential to open and see the JSON
+* Copy the `apikey` value
+* Copy the `url` value
 
 ### 3. Set up the model
 
