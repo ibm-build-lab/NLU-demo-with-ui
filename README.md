@@ -5,6 +5,8 @@ In this demo, we will create a web app that takes in text and analyzes it for se
 
 The main benefit of using the Natural Language Understanding service is its powerful analytics engine that provides cognitive enrichments and insights into data. NLU uses deep learning to extract meaning and metadata from unstructured text data. It uses text analytics to extract categories, classification, entities, keywords, sentiment, emotion, relations, and syntax.
 
+You will also learn how to deploy this application on an OpenShift cluster using the Developer tools
+
 NOTE: The React frontend was created from the [Create React App](https://github.com/facebook/create-react-app) project.
 
 ![architecture](./public/NLU.png)
