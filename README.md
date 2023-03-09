@@ -34,7 +34,7 @@ Create the following services:
 
 ### 2. Create credentials
 
-* Go to your [Natural Language Understanding](https://cloud.ibm.com/catalog/services/natural-language-understanding) service.
+* Open your [Natural Language Understanding](https://cloud.ibm.com/catalog/services/natural-language-understanding) service console.
 * Select **Service Credentials**
 * Click **New Credential**, and **Add** on the dialog box if you don't already have them. Be sure they have **Manager** authority
 * Click the **v** next to the credential to open and see the JSON
