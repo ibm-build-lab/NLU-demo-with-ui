@@ -1,16 +1,11 @@
-# Natural Language Understand Text Analyzation Engine
+# Natural Language Understand Text Analyzation Engine Demo
 
-In this code pattern, we will create a web app that takes in text and analyzes it for sentiment using the IBM Watson® Natural Language Understanding (NLU) APIs. The user will enter text into a text area and press the "Submit" button.  The text is analyzed based on the **latest loaded model** into an NLU Service.
+## Introduction
+In this demo, we will create a web app that takes in text and analyzes it for sentiment using the IBM Watson® Natural Language Understanding (NLU) APIs. The user will enter text into a text area and press the "Submit" button.  The text is analyzed based on the **latest loaded model** into an NLU Service.
 
 The main benefit of using the Natural Language Understanding service is its powerful analytics engine that provides cognitive enrichments and insights into data. NLU uses deep learning to extract meaning and metadata from unstructured text data. It uses text analytics to extract categories, classification, entities, keywords, sentiment, emotion, relations, and syntax.
 
 NOTE: The React frontend was created from the [Create React App](https://github.com/facebook/create-react-app) project.
-
-When you have completed this code pattern, you will understand how to:
-
-* interact with an instance of the IBM Watson® Natural Language Understanding libraries
-* make API calls into a preprovisioned NLU Service to retrieve the latest model and analyze text against it
-* use a React frontend to drive the calls into NLU
 
 ![architecture](./public/NLU.png)
 
@@ -21,24 +16,27 @@ When you have completed this code pattern, you will understand how to:
 1. Results are output to application
 
 ## Prerequisites
-### Public Cloud
 1. Sign up for an [IBM Cloud account](https://cloud.ibm.com/registration).
 1. Download the [IBM Cloud CLI](https://cloud.ibm.com/docs/cli/index.html#overview)
 
-# Steps
+## Estimated Time
+
+2 hours
+
+## Steps
 1. [Create Watson services with IBM Cloud](#1-create-watson-services-with-ibm-cloud)
 1. [Create credentials](#2-create-credentials)
 1. [Set up the model](#3-set-up-the-model)
 1. [Run the application](#4-run-the-application)
 
-## 1. Create Watson services with IBM Cloud
+### 1. Create Watson services with IBM Cloud
 
 Create the following services:
 
 * [**IBM Watson Studio**](https://cloud.ibm.com/catalog/services/watson-studio)
 * [**IBM Watson Natural Language Understanding**](https://cloud.ibm.com/catalog/services/natural-language-understanding)
 
-## 2. Create credentials
+### 2. Create credentials
 
 * Go to your [Natural Language Understanding](https://cloud.ibm.com/catalog/services/natural-language-understanding) service.
 * Select **Service Credentials**
@@ -47,7 +45,7 @@ Create the following services:
 * Copy the `apikey` value.
 * Copy the `url` value.
 
-## 3. Set up the model
+### 3. Set up the model
 
 Use Watson Studio to create a model to load into the Natural Language Understanding Service.
 
@@ -55,9 +53,9 @@ You can follow [this](https://developer.ibm.com/tutorials/build-a-recommendation
 
 Once you get to the "Deploy model to Watson Natural Language Understanding" heading you can use this application to analyze text instead of the curl commands. 
 
-## 4. Run the application
+### 4. Run the application
 
-### Run locally
+#### Run locally
 1. Clone this directory:
 
    ```bash
@@ -78,7 +76,7 @@ Once you get to the "Deploy model to Watson Natural Language Understanding" head
    npm start
    ```
 
-### Deploy to IBM Cloud
+#### Deploy to IBM Cloud
 
 1. Provision an OpenShift cluster in your IBM Cloud account
 1. Open the OpenShift console by selecting the blue **OpenShift web console** button at the top of the cluster detail page 
@@ -95,85 +93,23 @@ Once you get to the "Deploy model to Watson Natural Language Understanding" head
 8. Under `Builds`, you should see a `Build Config`. Open it and navigate to the `Environment` tab. Add the `REACT_APP_apikey` and `REACT_APP_nlu_url` environment variables. Start a new build
 9. Once the build is complete, open the deployed application and select the `host` link to see the application
 
-NOTE: if you change the code in the `git` repo, you will need to restart a new `build`
-
-## Usage
+### Usage
 
 Simply insert text into the text box, click **Submit** and you will see the sentiment of the text
 
-## Modifying what results you want to see
+## Summary
+
+Using Watson Assistant, you can create models and load them into NLU. This application will allow you to quickly anaylize text based on the models you load.  You can also look into the code to see how to call the NLU apis from a React application.
+
+## Next Steps
 
 To change what is displayed from the analyzation, simply edit the `src/App.js` file.  Locate the line (approx line 82):
 ```
 document.getElementById("results").textContent = JSON.stringify(body.sentiment.document, null, 4);
 ```
 Change `body.sentiment.document` to `body` to see the entire response.
-## Available Scripts
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+NOTE: if you change the code in the `git` repo, you will need to restart a new `build`
 
 ## References
 
@@ -185,10 +121,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 [NLU Code Pattern with full client/server React app](https://github.com/IBM/natural-language-understanding-code-pattern)
 
-<!-- keep this -->
-## License
-
-This code pattern is licensed under the Apache License, Version 2. Separate third-party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1](https://developercertificate.org/) and the [Apache License, Version 2](https://www.apache.org/licenses/LICENSE-2.0.txt).
-
-[Apache License FAQ](https://www.apache.org/foundation/license-faq.html#WhatDoesItMEAN)
 
