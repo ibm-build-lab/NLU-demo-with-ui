@@ -27,7 +27,11 @@ NOTE: The React frontend was created from the [Create React App](https://github.
 
 ## Steps
 
-### Provision Watson Studio and Natural Language Services on IBM Cloud and set up the Model
+1. [Provision Services and Set Up the Model](#provision-services-and-set-up-the-model)
+1. [Create credentials](#create-credentials)
+1. [Run the application](#run-the-application)
+
+### Provision Services and Set Up the Model
 
 Set up the services on IBM Cloud and use Watson Studio to create a model to load into the Natural Language Understanding Service.
 
