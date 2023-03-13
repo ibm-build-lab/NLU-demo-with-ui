@@ -27,7 +27,7 @@ NOTE: The React frontend was created from the [Create React App](https://github.
 
 ## Steps
 
-### 1. Provision Watson Studio and Natural Language Services on IBM Cloud and set up the Model
+### Provision Watson Studio and Natural Language Services on IBM Cloud and set up the Model
 
 Set up the services on IBM Cloud and use Watson Studio to create a model to load into the Natural Language Understanding Service.
 
@@ -35,7 +35,7 @@ You can follow the [build-a-recommendation-engine-with-watson-natural-language-u
 
 Once you get to the "Deploy model to Watson Natural Language Understanding" heading you can use this application to analyze text instead of the curl commands. 
 
-### 3. Create credentials
+### Create credentials
 
 * Open your [Natural Language Understanding](https://cloud.ibm.com/catalog/services/natural-language-understanding) service console.
 * Select **Service Credentials**
@@ -44,7 +44,7 @@ Once you get to the "Deploy model to Watson Natural Language Understanding" head
 * Copy the `apikey` value to use in the next step
 * Copy the `url` value to use in the next step
 
-### 4. Run the application
+### Run the application
 
 #### Run locally
 1. Clone this directory:
