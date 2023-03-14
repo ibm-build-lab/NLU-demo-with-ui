@@ -48,7 +48,7 @@ Once you get to the "Deploy model to Watson Natural Language Understanding" head
 * Copy the `apikey` value to use in the next step
 * Copy the `url` value to use in the next step
 
-Once credentials are created, they are available on the NLU Service "Manage" page: 
+Once credentials are created, they are available on the NLU Service **Manage** page: 
 ![credentials](./public/NLU_credentials.png)
 
 ### Run the application
