@@ -73,6 +73,7 @@ Once credentials are created, they are available on the NLU Service **Manage** p
    npm install
    npm start
    ```
+4. The application will be running on `localhost:3000`
 
 #### Deploy to IBM Cloud
 
