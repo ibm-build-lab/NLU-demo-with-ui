@@ -92,9 +92,9 @@ Once credentials are created, they are available on the NLU Service **Manage** p
 6. Go to **Topology** and open the newly created app icon.  You can watch the progress.
 ![topology](./public/topology.png)
 
-7. Eventually, the build should complete, the pods should start.
 8. Under `Builds`, you should see a `Build Config`. Open it and navigate to the `Environment` tab. Add the `REACT_APP_apikey` and `REACT_APP_nlu_url` environment variables. Start a new build
 ![build config env](./public/build_config_env.png)
+7. Eventually, the build should complete, the pods should start.
 
 9. Once the build is complete, open the deployed application and select the `host` link to see the application
 
