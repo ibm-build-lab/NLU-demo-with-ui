@@ -81,8 +81,8 @@ Once credentials are created, they are available on the NLU Service "Manage" pag
 ![console](./public/openshift_console_button.png)
 1. Create a new project called `nlu-demo`
 ![project](./public/create_project_dialog.png)
-2. From the OpenShift console, go into the **Developer** view. Select the `nlu-demo` project. Select **+Add**.  Choose `Git Repository`.
-![Add Menu](./public/add_menu_git.png)
+2. From the OpenShift console, go into the **Developer** view. Select the `nlu-demo` project. Select **+Add**.  Choose `Import From Git`.
+![Add Menu](./public/add_menu_git_repo.png)
 3. Be sure to use `Dockerfile` as the method of Import strategy. NOTE: on Openshift Version 8, this choice is made from the `Git Repository` card. On later versions, it is a selection from within the `Import from Git` page.
 ![create app dialog](./public/import_from_git_dialog.png)
 2. On the `Import from Git` page, enter this repo under `Git Repo URL`.
