@@ -105,7 +105,7 @@ Simply insert text into the text box, click **Submit** and you will see the sent
 
 ## Summary
 
-Using Watson Studio, you can create models and load them into NLU. This application will allow you to quickly anaylize text based on the models you load.  You can also look into the code to see how to call the NLU apis from a React application.
+Using Watson Studio, you can create models and load them into your Natural Language Understanding service. This application will allow you to quickly anaylize text based on the models you load.  You can also look into the code to see how to call the NLU apis from a React application.
 
 ## Next Steps
 
