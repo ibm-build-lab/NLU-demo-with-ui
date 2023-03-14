@@ -77,7 +77,7 @@ Once credentials are created, they are available on the NLU Service **Manage** p
 
 #### Deploy to IBM Cloud
 
-1. Provision an OpenShift cluster in your IBM Cloud account
+1. Provision an [OpenShift cluster](https://cloud.ibm.com/docs/openshift?topic=openshift-getting-started&interface=ui) in your IBM Cloud account
 1. Open the OpenShift console by selecting the blue **OpenShift web console** button at the top of the cluster detail page 
 ![console](./public/openshift_console_button.png)
 1. Create a new project called `nlu-demo`
