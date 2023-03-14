@@ -81,6 +81,7 @@ Once credentials are created, they are available on the NLU Service **Manage** p
 1. Open the OpenShift console by selecting the blue **OpenShift web console** button at the top of the cluster detail page 
 ![console](./public/openshift_console_button.png)
 1. Create a new project called `nlu-demo`
+
 ![project](./public/create_project_dialog.png)
 2. From the OpenShift console, go into the **Developer** view. Select the `nlu-demo` project. Select **+Add**.  Choose `Import From Git`.
 ![Add Menu](./public/add_menu_git_repo.png)
