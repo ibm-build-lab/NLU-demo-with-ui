@@ -79,14 +79,19 @@ Once credentials are created, they are available on the NLU Service **Manage** p
 
 1. Provision an [OpenShift cluster](https://cloud.ibm.com/docs/openshift?topic=openshift-getting-started&interface=ui) in your IBM Cloud account
 1. Open the OpenShift console by selecting the blue **OpenShift web console** button at the top of the cluster detail page 
+
 ![console](./public/openshift_console_button.png)
+
 1. Create a new project called `nlu-demo`
 
 ![project](./public/create_project_dialog.png)
+
 2. From the OpenShift console, go into the **Developer** view. Select the `nlu-demo` project. Select **+Add**.  Choose `Import From Git`.
 ![Add Menu](./public/add_menu_git_repo.png)
+
 3. Be sure to use `Dockerfile` as the method of Import strategy. NOTE: on Openshift Version 8, this choice is made from the `Git Repository` card. On later versions, it is a selection from within the `Import from Git` page.
 ![create app dialog](./public/import_from_git_dialog.png)
+
 2. On the `Import from Git` page, enter this repo under `Git Repo URL`.
 4. You can keep all the other defaults or change the name   
 5. Select **Create**
