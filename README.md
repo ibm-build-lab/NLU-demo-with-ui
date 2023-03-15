@@ -1,11 +1,11 @@
 # Natural Language Understand Text Analyzation Demo
 
 ## Introduction
-In this demo, we will create a web app that takes in text and analyzes it for sentiment using the IBM Watson® Natural Language Understanding (NLU) APIs. The user will enter text into a text area and press the "Submit" button.  The text is analyzed based on the **latest loaded model** into an NLU Service.
-
-The main benefit of using the Natural Language Understanding service is its powerful analytics engine that provides cognitive enrichments and insights into data. NLU uses deep learning to extract meaning and metadata from unstructured text data. It uses text analytics to extract categories, classification, entities, keywords, sentiment, emotion, relations, and syntax.
+In this demo,learn how to create a web app that takes in text and analyzes it for sentiment using the IBM Watson® Natural Language Understanding (NLU) APIs. The user will enter text into a text area and press the "Submit" button.  The text is analyzed based on the **latest loaded model** into an NLU Service.
 
 You will also learn how to deploy this application on an OpenShift cluster using the Developer tools
+
+The main benefit of using the Natural Language Understanding service is its powerful analytics engine that provides cognitive enrichments and insights into data. NLU uses deep learning to extract meaning and metadata from unstructured text data. It uses text analytics to extract categories, classification, entities, keywords, sentiment, emotion, relations, and syntax.
 
 NOTE: The React frontend was created from the [Create React App](https://github.com/facebook/create-react-app) project.
 
