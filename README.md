@@ -103,7 +103,7 @@ Once credentials are created, they are available on the NLU Service **Manage** p
 ![build config env](./public/build_config_env.png)
 7. Eventually, the build should complete, the pods should start.
 
-9. Once the build is complete, open the deployed application and select the `Location` link under the **Routes** section to see the application
+9. Once the build is complete, select the `Location` link under the **Routes** section to see the application
 
 ### Usage
 
