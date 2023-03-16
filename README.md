@@ -116,13 +116,15 @@ Using Watson Studio, you can create models and load them into your Natural Langu
 
 ## Next Steps
 
-To change what is displayed from the analyzation, simply edit the `src/App.js` file.  Locate the line (approx line 82):
-```
-document.getElementById("results").textContent = JSON.stringify(body.sentiment.document, null, 4);
-```
-Change `body.sentiment.document` to `body` to see the entire response.
+- To change what is displayed from the analyzation, simply edit the `src/App.js` file.  Locate the line (approx line 82):
+   ```
+   document.getElementById("results").textContent = JSON.stringify(body.sentiment.document, null, 4);
+   ```
+   Change `body.sentiment.document` to `body` to see the entire response.
 
-NOTE: if you change the code in the `git` repo, you will need to restart a new `build`
+   NOTE: if you deployed to the cloud and want to change the code you will need to fork the repo and push your updated code to your new repo, then deploy that repo to the OpenShift cluster. Everytime you change the code in the `git` repo, you will need to restart a new `build`
+
+- If you want to test another model, simply load the model into the NLU service and use the application to analyze text.
 
 ## References
 
