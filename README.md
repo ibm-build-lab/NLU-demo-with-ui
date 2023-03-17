@@ -70,7 +70,7 @@ Once credentials are created, they are available on the NLU Service **Manage** p
    ```
 3. Compile and start the application:
 
-   NOTE: Node version needs to be at 12.22.12 or higher for this application
+   NOTE: Node version 12.22.12 or higher required
 
    ```bash
    npm install
