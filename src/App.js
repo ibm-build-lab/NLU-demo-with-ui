@@ -107,7 +107,7 @@ function App() {
         </Form>
       </div>
       {/* <div className="results-heading" id="results-heading">Results</div> */}
-      <label>Sentiment
+      <label>Results
       </label>
       <pre><div className="results" id="results"></div></pre>
     </div >
