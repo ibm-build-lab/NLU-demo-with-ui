@@ -106,8 +106,7 @@ function App() {
           <Button className="search-btn" type="submit">Submit</Button>
         </Form>
       </div>
-      {/* <div className="results-heading" id="results-heading">Results</div> */}
-      <label>Sentiment
+      <label className="results-label">Results
       </label>
       <pre><div className="results" id="results"></div></pre>
     </div >
