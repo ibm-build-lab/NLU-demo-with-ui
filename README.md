@@ -54,6 +54,7 @@ Once credentials are created, they are available on the NLU Service **Manage** p
 ### Run the application
 
 #### Run locally
+
 1. Clone this directory:
 
    ```bash
@@ -68,6 +69,8 @@ Once credentials are created, they are available on the NLU Service **Manage** p
    PORT=3000
    ```
 3. Compile and start the application:
+
+   NOTE: Node version needs to be at 12.22.12 or higher for this application
 
    ```bash
    npm install
