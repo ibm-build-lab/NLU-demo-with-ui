@@ -28,6 +28,7 @@ function App() {
       .then(function (response) {
         console.log(response)
         var modelId = response.data.models[0].model_id
+        document.getElementById("model").textContent = JSON.stringify(modelId, null, 4);
         ingestDescription(modelId)
       })
       .catch(function (error) {
@@ -106,6 +107,9 @@ function App() {
           <Button className="search-btn" type="submit">Submit</Button>
         </Form>
       </div>
+      <label className="results-label">Using Model #
+      </label>
+      <pre><div className="results" id="model"></div></pre>
       <label className="results-label">Results
       </label>
       <pre><div className="results" id="results"></div></pre>
